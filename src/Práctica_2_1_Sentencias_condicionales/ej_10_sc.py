@@ -38,5 +38,6 @@ def main():
     else:
         print("Respuesta no válida, por favor responde con 'si' o 'no'.")
 
+
 if __name__ == "__main__":
     main()
