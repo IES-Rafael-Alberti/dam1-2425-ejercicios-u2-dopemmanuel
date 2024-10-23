@@ -20,6 +20,7 @@ def confirmar_contraseña(correcto):
     def contraseña(usuario, passrwd, passwords) debe ser true, la funcion se coloco
     en la variable correcto para ser confirmada en el main, y la variable correcto
     se esta usando en la funcion def confirmar_contraseña(correcto), que se usara para la condicion: """
+
     if correcto is not True:
         return False
     else:
