@@ -31,7 +31,7 @@ def ingredientes_pizza(veggy):
 def main():
 
     """Variables con condiciones"""
-    veggy = input("quieres una pizza vegetariana? (Yes/Not)")
+    veggy = input("quieres una pizza vegetariana? (Yes/Not)").lower()
 
     if veggy in ("si", "no"):
         ingredientes_pizza(veggy)

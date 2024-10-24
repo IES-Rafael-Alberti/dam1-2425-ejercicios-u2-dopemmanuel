@@ -4,22 +4,25 @@ e imprima por pantalla si la contraseña introducida por el
 usuario coincide con la guardada en la variable sin tener en 
 cuenta mayúsculas y minúsculas."""
 
-def contraseña(usuario, passrwd, passwords):
-
-    """Condicion para las contraseñas que si las contraseñas en passwords
+def contrasena(usuario, passrwd, passwords):
+    """
+    Condicion para las contraseñas que si las contraseñas en passwords
     no estan en el input del passwrd debe retornar a false, sino va a imprimir
-    un saludo con el nombre de usuario."""
+    un saludo con el nombre de usuario.
+    """
     if passrwd not in passwords:
         return False
     else:
         print(f"Bienvenido {usuario}!!")
         return True
 
-def confirmar_contraseña(correcto):
-    """Condicion para confirmar que la coondicion que esta dentro de la variable
+def confirmar_contrasena(correcto):
+    """
+    Condicion para confirmar que la coondicion que esta dentro de la variable
     def contraseña(usuario, passrwd, passwords) debe ser true, la funcion se coloco
     en la variable correcto para ser confirmada en el main, y la variable correcto
-    se esta usando en la funcion def confirmar_contraseña(correcto), que se usara para la condicion: """
+    se esta usando en la funcion def confirmar_contraseña(correcto), que se usara para la condicion: 
+    """
 
     if correcto is not True:
         return False
@@ -49,9 +52,9 @@ def main():
     usuario = input("Nombre de usuario → ")
     passwrd = input("Contrasena → ")
 
-    correcto = contraseña(usuario, passwrd, passwords)
+    correcto = contrasena(usuario, passwrd, passwords)
 
-    while confirmar_contraseña(correcto) == contraseña(usuario, passwrd, passwords):
+    while confirmar_contrasena(correcto) == contrasena(usuario, passwrd, passwords):
 
         print("La contraseña es incorrecta")
         usuario = input("Nombre de usuario → ")

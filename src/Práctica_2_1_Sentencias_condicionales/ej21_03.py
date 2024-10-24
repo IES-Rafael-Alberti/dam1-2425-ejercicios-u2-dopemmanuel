@@ -12,9 +12,6 @@ def numero_divisores(num1, num2):
     if num1 == 0:
         print("Pana, hay un pequeño error aqui, el primer numero no puede ser cero.")
         return False
-    elif num2 == 0:
-        print("Eeo Compadre tampoco, el segundo numero no se puede usar para dividir entre cero")
-        return False
     else:
         division = num1 / num2
         print(f"{num1} entre {num2} da {division:.2f}")
@@ -23,7 +20,7 @@ def numero_divisores(num1, num2):
 def main():
 
     """
-    Variables num1 y num2 que son tipo int y que va a almacenar los numeros a dividir
+    Variables num1 y num2 que son tipo int y que va a almacenar los numeros a dividir 
     y con una condicion con exepcion, y para salir de ella una variables llamada solo_numero sera true
     en el caso de que cuando nos pregunte si queremos salir debemos de colocar algo distinto que si: 
     """
@@ -35,7 +32,6 @@ def main():
 
             while not numero_divisores(num1, num2):
                 num1 = int(input("Ingrese el primer numero que no sea 0 → "))
-                num2 = int(input("Ingrese un segundo numero que no sea 0 → "))
 
             salir = input("Quieres salir? (s/n) → ")
             if salir != "n":

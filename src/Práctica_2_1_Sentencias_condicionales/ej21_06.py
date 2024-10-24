@@ -14,7 +14,7 @@ def determinar_grupo(nombre, genero):
 
 
 def main():
-
+    """Solo las variables de entrada y talvez un exeption:"""
     nombre = input("Ingrese su nombre: → ").upper()
     genero = input("Su genero? (H para hombre y M para mujer): → ")
 

@@ -1,11 +1,17 @@
-"""Escribir un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no."""
+"""
+Escribir un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no.
+"""
 def adult_swim(edad):
 
-    """Funcion secundaria que contiene la condcion de la funcion: """
+    """
+    Funcion secundaria que contiene la condcion de la funcion: 
+    """
     if edad < 17:
         print("Eres menor de edad.")
     else:
         print("Eres mayor de edad.")
+
+    return edad
 
 def main():
 
