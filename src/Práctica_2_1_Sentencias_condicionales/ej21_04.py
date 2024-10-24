@@ -17,6 +17,7 @@ def main():
             num = int(input("Ingresa el numero y te dire si es par o inpar → "))
             par_inpar(num)
 
+
         except ValueError:
             print("No se permiten ningun caracter que no sea de valor numerico.")
 
