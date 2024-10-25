@@ -1,3 +1,4 @@
+"""Opuesto_ej23_03"""
 def numero_ntero(numr):
 
     """OK"""    
