@@ -40,12 +40,14 @@ def main():
     while salida:
         try:
 
-            renta = int(input("De cuanto essu renta anual? → "))
+            renta = input("De cuanto es su renta anual? → ")
+            renta = int(renta)
             print(f"Del impositivo te corresponde el {tramos_impositivos(renta)} %.")
 
-            quitt = input("Quieres consultar otra vez? (s/n): → ")
-            if quitt != "s":
-                salida = False
+            #quitt = input("Quieres consultar otra vez? (s/n): → ")
+            #if quitt != "s":
+                #salida = False
+            salida = False
         except ValueError:
             print("Recuerda, solo valor numerico si no colocas valor numerico no funcionara...")
 

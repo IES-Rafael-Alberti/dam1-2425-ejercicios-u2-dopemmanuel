@@ -14,6 +14,7 @@ Escribir un programa que lea la puntuación del usuario e indique su nivel de re
 
 def evaluacion_puntuacion(puntos):
     """IFs para la puntuacion con dos variables iniciales para nivel y puntos:"""
+    
     nivel = ""
     puntos = 0
 
@@ -40,17 +41,16 @@ def evaluacion_puntuacion(puntos):
 
 def main():
     """Variables y condicion con exeption:"""
-
-    Verdad = True
-
-    while Verdad:
+    verdad = True
+    while verdad:
         try:
             puntos = float(input("Ingrese la puntuacion → "))
             evaluacion_puntuacion(puntos)
 
-            asken = input("Quieres seguir con la puntuacion? (s/n) → ")
-            if asken != "s":
-                Verdad = False
+            #asken = input("Quieres seguir con la puntuacion? (s/n) → ")
+            #if asken != "s":
+                #verdad = False
+            verdad = False
 
         except ValueError:
             print("ERROR: eso no es un formato numerico...")

@@ -1,12 +1,14 @@
-"""Escribir un programa que almacene la cadena de caracteres 
+"""
+Escribir un programa que almacene la cadena de caracteres 
 contraseña en una variable, pregunte al usuario por la contraseña 
 e imprima por pantalla si la contraseña introducida por el 
 usuario coincide con la guardada en la variable sin tener en 
-cuenta mayúsculas y minúsculas."""
+cuenta mayúsculas y minúsculas.
+"""
 
 def contrasena(usuario, passrwd, passwords):
     """
-    Condicion para las contraseñas que si las contraseñas en passwords
+    Condicion para las contraseñas, que si las contraseñas en passwords
     no estan en el input del passwrd debe retornar a false, sino va a imprimir
     un saludo con el nombre de usuario.
     """
@@ -43,12 +45,7 @@ def main():
     y que pida los datos otra vez. 
     """
 
-    passwords = ["UbuntuLinux",
-                 "contraseña",
-                 "hello world!!",
-                 "python",
-                 "biblioteca"
-                 ]
+    passwords = ["contraseña"]
     usuario = input("Nombre de usuario → ")
     passwrd = input("Contrasena → ")
 

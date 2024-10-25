@@ -24,21 +24,35 @@ def main():
     y con una condicion con exepcion, y para salir de ella una variables llamada solo_numero sera true
     en el caso de que cuando nos pregunte si queremos salir debemos de colocar algo distinto que si: 
     """
+    cadena = True
     solo_numero = True
     while solo_numero:
         try:
-            num1 = int(input("Ingrese el primer numero → "))
-            num2 = int(input("Ingrese el segundo numero → "))
+            num1 = input("Ingrese el primer numero → ")
+            num2 = input("Ingrese el segundo numero → ")
+
+            cadena = False
+
+            cadena = True
+
+            num1 = int(num1)
+            num2 = int(num2)
+            cadena = False
 
             while not numero_divisores(num1, num2):
                 num1 = int(input("Ingrese el primer numero que no sea 0 → "))
 
-            salir = input("Quieres salir? (s/n) → ")
-            if salir != "n":
-                solo_numero = False
+            #salir = input("Quieres salir? (s/n) → ")
+            #if salir != "n":
+                #solo_numero = False
+
+            solo_numero = False
 
         except ValueError:
-            print("Tampoco se aceptan letras, colo de caracter numerico.")
+            if cadena:
+                print("Pana!! Nada de letras... solo caracter numerico.")
+
+
 
 if __name__== "__main__":
     main()

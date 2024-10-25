@@ -12,11 +12,12 @@ def main():
     Contiene los datos de la variable junto con el de la fucnion.
     Tambien tiene una exepcion para evitar que se coloquen palabras.
     """
+
     while True:
         try:
             num = int(input("Ingresa el numero y te dire si es par o inpar → "))
-            par_inpar(num)
 
+            par_inpar(num)
 
         except ValueError:
             print("No se permiten ningun caracter que no sea de valor numerico.")

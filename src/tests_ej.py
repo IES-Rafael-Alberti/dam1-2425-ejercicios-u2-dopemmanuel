@@ -64,12 +64,6 @@ if __name__ == "__main__":
     main()
 """
 
-
-"""
-Escribir un programa que pida al usuario un número entero positivo y 
-muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
-
-"""
 def comprobar_numero():
     """Permite comprobar la variable"""
     es_str = True

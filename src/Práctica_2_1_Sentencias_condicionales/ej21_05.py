@@ -3,7 +3,7 @@ Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos
 Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no.
 """
 
-from ej_1_sc import adult_swim
+from ej21_01 import adult_swim
 def confirmar_edad_ingresos(age, ingresos):
     """↑
     Llamo la funcion que tengo en el ej_01_sc.py, usando la funcion llamada como una variable 
@@ -25,25 +25,42 @@ def confirmar_tributo(age, ingresos):
     else:
         print("No creo que haya que tributar.")
 
-
 def main():
     """Variables, una contiene true, dos seran de entrada y la ultima de salida:"""
+    no_str = True
     bucle_continue = True
 
     while bucle_continue:
         try:
-            age = int(input("Cual es tu edad? → "))
-            ingresos = float(input("De cuanto son tus ingresos? → "))
+            age = input("Cual es tu edad? → ")
+            no_str = False
+
+
+
+            if "." in age:
+                raise ValueError("La edad no es decimal, Intentalo de nuevo.")
+
+            ingresos = input("De cuanto son tus ingresos? → ")
+
+
+            no_str = True
+            age = int(age)
+            ingresos = float(ingresos)
+            no_str = False
 
             confirmar_tributo(age, ingresos)
 
-            question = input("Quieres ingresar otra edad e ingresos?(s/n): → ").lower()
+            #question = input("Quieres ingresar otra edad e ingresos?(s/n): → ").lower()
+            #if question != "s":
+                #bucle_continue = False
 
-            if question != "s":
-                bucle_continue = False
+            bucle_continue = False
 
-        except ValueError:
-            print("ERROR 001: solo se permiten caracteres numericos.")
+        except ValueError as e:
+            if no_str:
+                print("ERROR 001: solo se permiten caracteres numericos.")
+            else:
+                print(f"{e}")
 
 
 if __name__ == "__main__":
