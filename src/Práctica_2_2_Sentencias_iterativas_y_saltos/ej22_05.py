@@ -8,6 +8,7 @@ amount *= 1 + interest / 100
 # - interest: Interes porcentual anual 
 """
 def informacion():
+    num1 = input("Ingresa la cantidad a invertir: → ")
 
 
 def main():
