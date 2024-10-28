@@ -62,10 +62,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-"""
+
 
 def comprobar_numero():
-    """Permite comprobar la variable"""
     es_str = True
     numero_valido = False
 
@@ -97,9 +96,7 @@ def comprobar_numero():
 
 
 def numeros_impares(num_i: int):
-    """
-    Condicion para hacer los numeros impares, extrayendo desde la variable de main:
-    """
+
 
     impares = ""
     for inicial in range(1, int(num_i) + 1):
@@ -109,14 +106,12 @@ def numeros_impares(num_i: int):
     return impares[:-1]
 
 def reintentar():
-    """Para saber si quieres salir del bulce"""
+
     intentar = input("Quieres salir? (s/n) → ").lower()
     return intentar != "s"
 
 def main():
-    """
-    Contiene en variables las condiciones para ser imprimidas:
-    """
+
 
     click = True
     while click:
@@ -124,6 +119,39 @@ def main():
         print(numeros_impares(num_i))
 
         click = reintentar()
+
+if __name__ == "__main__":
+    main()
+"""
+def comprobar_numero():
+    """
+    Pregunta al usuario su edad y asegura que la entrada sea un número entero válido.
+    """
+    while True:
+        try:
+            edad = input("¿Cuántos años tienes? → ")
+            if "." in edad:
+                raise ValueError("ERROR: Tu edad no puede ser decimal.")
+            edad = int(edad)
+            if edad < 0:
+                raise ValueError("ERROR: La edad no puede ser negativa.")
+            return edad
+        except ValueError as e:
+            print(e)
+
+def contar_la_edad(edad: int):
+    """
+    Muestra por pantalla todos los años que ha cumplido el usuario desde 1 hasta su edad.
+    """
+    for anio in range(1, edad + 1):
+        print(anio)
+
+def main():
+    """
+    Función principal del programa.
+    """
+    edad = comprobar_numero()
+    contar_la_edad(edad)
 
 if __name__ == "__main__":
     main()

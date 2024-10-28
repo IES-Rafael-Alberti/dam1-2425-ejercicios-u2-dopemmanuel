@@ -7,7 +7,7 @@ def saved_passwrd():
     """Variables y condiciones"""
     contrasenias =["python","kotlin","C++"]
     activation = True
-
+    
     while activation:
         try:
             insertar = input("Ingresa la contraseña → ")
