@@ -7,7 +7,7 @@ amount *= 1 + interest / 100
 # - amount: Cantidad a invertir
 # - interest: Interes porcentual anual 
 """
-def 
+def informacion():
 def main():
 
 if __name__ == "__main__":
