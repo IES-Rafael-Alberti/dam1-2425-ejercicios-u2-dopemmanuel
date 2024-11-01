@@ -8,7 +8,21 @@ amount *= 1 + interest / 100
 # - interest: Interes porcentual anual 
 """
 def informacion():
-    num1 = input("Ingresa la cantidad a invertir: → ")
+    nostrings = True
+    button = True
+    while button:
+        try:
+            user = input("Ingrese un usuario: → ")
+            amount = input(f"{user}, Ingresa la cantidad a invertir: → ")
+            nostrings = False
+            interest = input(f"Ok {user}, ahora ingresa el Interes anual: → ")
+
+            amount = float(amount)
+            interest = int(interest)
+
+        except ValueError as e:
+            if
+
 
 
 def main():
