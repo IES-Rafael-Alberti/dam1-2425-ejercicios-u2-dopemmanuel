@@ -1,5 +1,14 @@
+"""
 import os
 
+def introducion():
+    Funcion para el titulo:
+    print("=" * 50)
+    print("")
+    print("=" * 50)
+    print("\n")
+
+    
 def pedir_num():
     nostring = True
     test = True
@@ -60,3 +69,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""

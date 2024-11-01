@@ -2,6 +2,16 @@
 Escribir un programa que pregunte al usuario su edad y muestre 
 por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 """
+import os
+def introducion():
+    """Funcion para el titulo:"""
+    print("=" * 80)
+
+    print("         Este Programa te pedira tu edad y mostrara por pantalla todos    ")
+    print("             los años que has cumplido hasta la actualidad.    ")
+
+    print("=" * 80)
+
 
 def comprobar_numero():
     """
@@ -20,7 +30,7 @@ def comprobar_numero():
     exits = True
     while exits:
         try:
-            edad = input("¿Cuantos años tienes? →")
+            edad = input("¿Cuantos años tienes? → ")
             no_letra = False # Es Usado para detectar cadenas
 
             if "." in edad:
@@ -38,8 +48,12 @@ def comprobar_numero():
         except ValueError as e:
             if no_letra:
                 print("No se puede usar letras")
+                input("↩ para reintentar....")
+                clear_console()
             else:
                 print(e)
+                input("↩ para reintentar....")
+                clear_console()
     return edad
 
 
@@ -56,14 +70,29 @@ def contar_la_edad(edad):
 
             print(f"Años cumplidos → {hor.strip(",")[:-4]}.")
 
+
+def clear_console():
+    """Funcion para limpiar la consola:"""
+    if os.name == 'nt':
+        os.system('cls')
+
 def main():
     """
     Funcion principal del programa
     """
+    clear_console()
+
+    introducion()
+    print("\n")
+    input("Presiona Enter para continuar...")
+    clear_console()
 
     edad = comprobar_numero()
+    print("\n")
     contar_la_edad(edad)
-    print(f"\nY actualmente tienes {edad} años. ")
+    print(f"Y actualmente tienes {edad} años. \n")
+    input("Done!!, press ↩ for exit.")
+    clear_console()
 
 if __name__ == "__main__":
     main()
