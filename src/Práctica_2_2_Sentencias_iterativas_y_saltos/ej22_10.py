@@ -26,8 +26,11 @@ def pedir_num():
             num = input(f"Hola {user}!! ingresa el numero entero: → ")
             nostring = False
 
+            if num == "":
+                raise ValueError("ERR0R: Esto no debe estar vacio.")
+
             if "." in num:
-                raise ValueError("ERR0R: no se permiten decimales.")
+                raise ValueError("ERR0R: No se permiten decimales.")
 
             nostring = True
             num = int(num)
@@ -51,11 +54,11 @@ def num_primo(num: int):
     if num <= 1:
         print(f"El {num} No es Primo.\n")
     if num <= 3:
-        print(f"El {num} es Primo.\n")  # 2 y 3 son primos
+        print(f"El {num} es Primo.\n")
     if num % 2 == 0:
-        print(f"El {num} no es primo.\n")  # Número par mayor que 2 no es primo
+        print(f"El {num} no es primo.\n")
 
-    # Solo verificamos divisores impares hasta la raíz cuadrada de num
+    # Opcional: sirve para identificar los divisores impares hasta la raíz cuadrada de num
     for i in range(3, int(num) + 1, 2):
         if num % i == 0:
             print(f"El {i} No es primo.")
