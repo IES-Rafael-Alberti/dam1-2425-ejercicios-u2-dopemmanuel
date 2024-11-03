@@ -12,7 +12,6 @@ def introducion():
 
     print("=" * 80)
 
-
 def comprobar_numero():
     """
     Variable principal: edad = es str pasara a int si no se detecta algo relacionado con float.
@@ -56,7 +55,6 @@ def comprobar_numero():
                 clear_console()
     return edad
 
-
 def contar_la_edad(edad):
     """De la funcion comprobar numero"""
 
@@ -69,7 +67,6 @@ def contar_la_edad(edad):
             hor += str(anios)
 
             print(f"Años cumplidos → {hor.strip(",")[:-4]}.")
-
 
 def clear_console():
     """Funcion para limpiar la consola:"""

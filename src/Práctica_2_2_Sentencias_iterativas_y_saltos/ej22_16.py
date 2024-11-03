@@ -16,8 +16,6 @@ def clear_console():
     """Esta función permite limpiar la consola."""
     if os.name == 'nt':
         os.system('cls')
-    else:
-        os.system('clear')
 
 def funcion():
     """Función que lee números, calcula la suma y encuentra el mayor número ingresado."""

@@ -17,6 +17,21 @@ def clear_console():
     if os.name == 'nt':
         os.system('cls')
 
+def num_digitos_pares_impares():
+    nostring = True
+    active = True
+    while active:
+        try:
+
+
+
+        except ValueError as found:
+            print(found)
+            print("\n")
+            input("Presiona ↩ para intentarlo de nuevo...")
+            clear_console()
+
+
 def main():
     """Funcion principal:"""
 
@@ -24,6 +39,7 @@ def main():
     introducion()
     print("\n")
     input("Presione ↩ para continuar...")
+    clear_console()
 
 
 if __name__ == "__main__":

@@ -70,3 +70,39 @@ def main():
 if __name__ == "__main__":
     main()
 """
+import os
+def introducion():
+    """Funcion para el titulo:"""
+    print("=" * 80)
+
+    print("")
+
+    print("=" * 80)
+
+def clear_console():
+    """Esta funcion permite limpiar la consola: """
+    if os.name == 'nt':
+        os.system('cls')
+
+def larga_palabra():
+    active = True
+    while active:
+        try:
+        except ValueError as found:
+            print(found)
+            print("\n")
+            input("Presiona ↩ para intentarlo de nuevo...")
+            clear_console()
+
+def main():
+    """Funcion principal:"""
+
+    clear_console()
+    introducion()
+    print("\n")
+    input("Presione ↩ para continuar...")
+    clear_console()
+
+if __name__ == "__main__":
+    pass
+    main()
